@@ -6,10 +6,11 @@ import { ProductModule } from './product/product.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { CartModule } from './cart/cart.module';
+import 'dotenv/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/nestjs'), // 1.2 Connect to the database
+    MongooseModule.forRoot(process.env.MONGO_URI), // 1.2 Connect to the database
     ProductModule,
     UserModule,
     AuthModule,

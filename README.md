@@ -40,9 +40,6 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Test
@@ -51,12 +48,53 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
+## Some examples
+
+### Create a new user
+
+#### POST User: http://localhost:3000/auth/register
+
+```
+{
+  "username": "username",
+  "email": "username@gmail.com",
+  "password": "password",
+  "roles": ["user", "admin"]
+}
+```
+![AddUser](./images/addUser.png)
+
+#### POST login and Get token: http://localhost:3000/auth/login
+
+```
+{
+  "username": "username",
+  "email": "username@gmail.com",
+  "password": "password",
+  "roles": ["user", "admin"]
+}
+```
+
+![Login](./images/login.png)
+
+#### POST Create Product in : http://localhost:3000/auth/login
+
+```
+{
+    "name": "iphone 15",
+    "description": "Apple produce a new version of the iphone and it works significatly faster that previous model!!!",
+    "price": 890,
+    "category": "Phone"
+}
+```
+
+![Add Product](./images/addProduct.png)
+
+
+
 
 ## Support
 
